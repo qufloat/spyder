@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <!-- css -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+h1{
+  text-align: center;
+  letter-spacing: 1rem;
+  text-transform: uppercase
+}
+.container{
+    border-radius: 10px;
+    padding: 2rem;
+    color: rgb(251, 255, 4);
+}
+
+.container > *{
+    width: 100%;
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+button{
+    transition: background-color 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+button:hover{
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+
+      <!-- html -->
+      <div class="container">
+        <h1>Da Calculator</h1>
+        <p>Number 1 : </p>
+        <input id="n1" type="text" value="0"/>
+        <p>Operator </p>
+        <input id="op" type="text" value="+"/>
+        <p>Number 2 : </p>
+        <input id="n2" type="text"  value="0"/>
+        <button id="btn" type="button" >do it</button>
+      </div>
+
+      <!-- javascript -->
+      <script >
+        let b = document.getElementById("btn");
+        b.addEventListener('click',doit);
+          function doit(){ 
+            let number1 = Number(document.getElementById('n1').value);
+            let number2 = Number(document.getElementById('n2').value);
+            let op = document.getElementById("op").value;
+
+            let result = "";
+            switch(op){
+              case "+": 
+                  result+=number1+number2;
+                  break;
+              case "-":
+                  result+=number1-number2;
+                  break;
+              case "/":
+                  result+=number1/number2;
+                  break;
+              case "*":
+                  result+=number1*number2;
+                  break;
+            }
+            
+            alert(`results = ${result}`);
+          }
+      </script>
+
+
+  </body>
+</html>
