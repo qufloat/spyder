@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="forms.css">
+  <title>ID Form</title>
+</head>
+
+
+<body>
+
+  <!-- Container -->
+  <div class="container">
+    <div class="t">
+      <h1>Register for an ID </h1>
+      <img src="./flag.png" alt="flag">
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+
+      <!-- Wrapper -->
+      <div class="wrapper">
+        <div class="title">
+          <h1>Republic of South Africa</h1>
+          <h2>National Identity Card</h2>
+        </div>
+
+        <div class="isurname">
+          <label for="Surname">Surname</label>
+          <input type="text" id="sname" name="fsname" placeholder="Enter surname" maxlength="30">
+        </div>
+
+        <div class="iname">
+          <label for="Name">Name</label>
+          <input type="text" id="name" name="fname" placeholder="Enter name" maxlength="30">
+        </div>
+
+        <div class="inationality">
+          <label for="Gender">Gender</label>
+          <select name="Gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female" selected>Female</option>
+          </select>
+        </div>
+        <div class="dob">
+          <label for="DOB">Date of Birth</label>
+          <input type="Date">
+        </div>
+
+
+        <div class="comments">
+          <label for="Comments">Anything you would like to add?</label>
+          <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="firstTime">
+          <label for="FirstTime">Send me a notification</label>
+          <input type="checkbox">
+        </div>
+
+        <input type="Submit" value="Apply">
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
